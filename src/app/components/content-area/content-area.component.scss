@@ -1,0 +1,237 @@
+footer{
+    min-width: 100vw;
+    height: 470px;
+    margin: 0 auto;
+    background-color: var(--fundo-footer);
+    
+  }
+  
+  .conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1136px;
+    background-color: var(--fundo-footer);
+    margin: 0 auto;
+    padding: 64px;
+    height: 240px;
+  }
+  
+  .titulo__footer{
+    display: flex;
+    align-items: center;
+    width: 176px;
+    height: 50px;
+  }
+  
+  .titulo__escondido{
+    display: none;
+  }
+  
+  .informacao__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 234px;
+    width: 176px;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  
+  .contato__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 560px;
+    height: 240px;
+  }
+  
+  .titulo__form{
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .contatoNome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--texto-apresentacao);
+    margin-top: 0.5rem;
+    padding: 8px 12px 7px 12px;
+    gap: 4px;
+    width: 33.5rem;
+    height: 3.5rem;
+  }
+  
+  .label__nome{
+    color: var(--texto-label);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  
+  .nome__contato{
+    border: none;
+    background-color: var(--texto-apresentacao);
+    
+  }
+  
+  .descricaoName{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--texto-apresentacao);
+    margin-top: 1rem;
+    width: 35rem;
+    height: 5.125rem;
+  }
+  .descricao__contato{
+    margin: 16px 12px 0px 12px;
+    width: 33.5rem;
+    border: none;
+  }
+  
+  .descricao__contato::placeholder{
+    color: var(--texto-label);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+  
+  .button__footer{
+    background-color: var(--azul-button);
+    color: var(--texto-apresentacao);
+    margin-top: 0.5rem;
+    border: none;
+    width: 165px;
+    height: 51px;
+  }
+  
+  
+  
+  @media screen and (max-width: 1250px) {
+      .conteudo{
+        width: 60rem;
+      }
+  }
+  
+  
+  @media screen and (max-width: 1100px) {
+  
+    .titulo__footer{
+      display: none;
+    }
+  
+    .titulo__escondido{
+      display: block;
+      display: flex;
+      align-items: center;
+      width: 176px;
+      height: 50px;
+    }
+  
+  
+    .conteudo{
+      width: 27.125rem;
+      height: 240px;
+      justify-content: center;
+      gap: 94px;
+    }
+  
+    .contato__footer{
+      width: 27.125rem;
+      height: 229px;
+    }
+  
+        
+    .titulo__form{
+      width: 27.125rem;
+    }
+  
+    .contatoNome{
+       width: 410px;
+    }
+        
+    .label__nome{
+      width: 410px;    
+    }
+        
+    .nome__contato{
+      width: 410px;
+    }
+  
+    .descricaoName{
+      width: 27.125rem;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width: 760px) {
+      
+    footer{    
+      height: 655px;
+      margin-top: 0;
+    }
+     
+    .conteudo{
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      padding: 16px;
+      width: 328px;
+      height: 521px;
+    }
+  
+    .informacao__footer{
+      margin-top: 0;
+      text-align: center;
+    }
+  
+    .contato__footer{
+      width: 328px;
+      height: 229px;
+    }
+  
+        
+    .titulo__form{
+      width: 328px;
+      height: 19px;
+    }
+  
+    .contatoNome{
+       width: 304px;
+       height: 56px;
+    }
+        
+    .label__nome{
+      width: 18rem;    
+    }
+        
+    .nome__contato{
+      width: 18rem;
+    }
+  
+    .descricaoName{
+      width: 328px;
+      height: 82px;
+    }
+    .descricao__contato{
+      width: 328px;
+    }
+    .button__footer{
+      width: 151px;
+      height: 40px;
+    }
+    
+  }
+    
+  
+  

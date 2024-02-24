@@ -1,0 +1,29 @@
+
+<section>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="product">
+            <div class="product__image">
+                <img class="_img" src="{{ product.url }}" alt="{{ product.name }}">
+            </div>
+            <div class="product__info">
+                <h2 class="product__name">{{ product.name }}</h2>
+                <p class="product__description">{{ product.description }}</p>
+                <p class="product__price">R$ {{ product.price | number:'1.2-2'}}</p>
+                <div class="_btnConfig" *ngIf="estaLogado(); else loginSection">
+                    <button class="btn btn-primary">Add to cart(em desenvolvimento)</button>
+                    <button class="btn btn-delete" (click)="excluirProduto()">Excluir</button>
+                    <button class="btn btn-edit" routerLink="/update/{{product.id}}">Editar</button>
+                </div>
+                <ng-template #loginSection>
+                    <div class="_btnConfig">
+                        <button class="btn btn-primary">Add to cart(em desenvolvimento)</button>
+                    </div>
+                </ng-template>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>

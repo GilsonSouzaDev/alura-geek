@@ -1,0 +1,37 @@
+
+<main class="__allproduct">
+  
+  <section class="produtos">
+    <div class="produto__apresentacao">
+      <div class="produto__titulo">
+        <p>Todos os produtos</p>
+      </div>
+
+
+    <div *ngIf="!estaLogado(); else loginSection">
+      <div>
+      </div>
+    </div>
+
+    <ng-template #loginSection>
+      <div>
+        <button class="botao__produtos" routerLink="/cadastro">Adicionar produto</button> 
+      </div>
+    </ng-template>
+      
+      
+    </div>
+    <section class="produtos__lista">
+      <div class="produtos__itens" *ngFor="let products of allproduct">
+        <img class="__imagem"  [src]="products.url" alt="{{products.name}}">
+        <p class="produto__name">{{products.name}}</p>
+        <p class="produto__preco">R$ {{ products.price | number:'1.2-2'}}</p>
+        <a href="" routerLink="/oneproduct/{{products.id}}" class="produto__link">ver produto</a>
+      </div> 
+    </section>
+  </section>
+  
+</main>
+
+  
+  

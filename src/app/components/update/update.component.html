@@ -1,0 +1,122 @@
+
+
+<main>
+    <section>
+        <form class="cadastro" #f="ngForm"  (ngSubmit)="update(f)">
+            
+            <div>
+                <p class="titulo__cadastro">Atualizar produto</p>
+            </div>
+            
+            <div class="casdastroNome">
+                <label for="nome__cadastro" class="label__cadastro">URL da imagem</label>
+                <input 
+                name="url" 
+                type="url"  
+                class="nome__cadastro" 
+                ngModel 
+                pattern="^(https?|ftp):\/\/[^\s/$.?#].[^\s]*\.(jpg|jpeg|png|gif|bmp)(\?[^\s]*)?$" 
+                required 
+                #url="ngModel"
+                [(ngModel)]="modelo.url"
+            >
+                
+                <div  *ngIf="(url?.invalid && url?.touched) || url?.dirty">
+                    <app-mensagem *ngIf="url?.errors?.['required']" mensagem="O campo url deve ser preenchido"></app-mensagem>
+                    <app-mensagem *ngIf="url?.errors?.['pattern']" mensagem="Preencha com um url valido"></app-mensagem>
+                </div>
+            </div>
+            
+            <div class="casdastroNome">
+                <label for="nome__cadastro" class="label__cadastro">Categoria</label>
+                <select 
+                    name="category" 
+                    type="text" 
+                    placeholder="Consoles" 
+                    class="nome__cadastro" 
+                    ngModel 
+                    required 
+                    #category="ngModel"
+                    [(ngModel)]="modelo.category"
+                    
+                >
+                    <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+                </select>
+                <div  *ngIf="(category?.invalid && category?.touched) || category?.dirty">
+                    <app-mensagem *ngIf="category?.errors?.['required']" mensagem="O campo categoria deve ser selecionado"></app-mensagem>  
+                </div>
+            </div>
+            
+            <div class="casdastroNome">
+                <label for="nome__cadastro" class="label__cadastro">Nome do produto</label>
+                <input 
+                    name="name" 
+                    type="text" 
+                    placeholder="ProdutoXYZ" 
+                    class="nome__cadastro" 
+                    ngModel 
+                    required 
+                    #name="ngModel"
+                    [(ngModel)]="modelo.name"
+                >
+                <div  *ngIf="(name?.invalid && name?.touched) || name?.dirty">
+                    <app-mensagem *ngIf="name?.errors?.['required']" mensagem="Você precisa dar um nome ao produto"></app-mensagem>  
+                </div>
+            </div>
+            
+            <div class="casdastroNome">
+                <label for="nome__cadastro" class="label__cadastro">Preço do produto</label>
+                <input 
+                    type="number" 
+                    placeholder="R$ 60,00" 
+                    class="nome__cadastro"
+                    name="price"
+                    ngModel
+                    required
+                    pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                    #price="ngModel"
+                    [(ngModel)]="modelo.price"
+                >
+                <div  *ngIf="(price?.invalid && price?.touched) || price?.dirty">
+                    <app-mensagem *ngIf="price?.errors?.['required']" mensagem="Você precisa dar um preço ao produto"></app-mensagem>  
+                    <app-mensagem *ngIf="price?.errors?.['pattern']" mensagem="Preencha com um preço valido"></app-mensagem>
+                </div>
+            </div>
+            
+            <div class="descricaoCadastro">
+                <div>
+                <textarea 
+                    name="description"
+                    type="text" 
+                    placeholder="Descrição do produto" 
+                    class="descricao__cadastro"
+                    ngModel
+                    #description="ngModel"
+                    required
+                    [(ngModel)]="modelo.description"
+                    >
+                </textarea>
+                <div  *ngIf="(description?.invalid && description?.touched) || description?.dirty">
+                    <app-mensagem *ngIf="description?.errors?.['required']" mensagem="Você precisa adicionar uma descrição para o produto"></app-mensagem>  
+                </div>
+                </div>
+             
+                
+            </div>
+            
+            
+            
+            <div>
+            <button type="submit" class="button__cadastro" >Atualizar produto</button>
+        </div>
+        
+    </form>
+    
+    
+</section>
+    
+</main>
+
+
+
+

@@ -1,0 +1,40 @@
+<mat-toolbar class="toobar">
+  <div class="container container__pesquisa">
+    <div class="logo item_cabecalho">
+      <img routerLink="/home" src="../../../assets/img/sports_esports_black_24dp 1.svg" alt="controle-games"
+        class="controle__topo">
+      <p routerLink="/home"><img src="../../../assets/img/Texto.svg" alt="" class="texto__topo"></p>
+    </div>
+    <div class="pesquisa item_cabecalho" [style.position]="displayPosition" [style.max-width]="maxSearch">
+        <input #pesquisa type="text"  class="aba__pesquisa" [formControl]="searchControl" [style.display]="displaySearch" >     
+        <img src="../../../assets/img/pesquisa.svg" alt="pesquisa" class="button__pesquisa" (click)="toggleAbaPesquisa()">
+    </div>
+    <div *ngIf="estaLogado(); else loginSection" class="item_cabecalho __iconLogin">
+      <!-- Conteúdo para usuário logado -->
+      <mat-icon mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="__iconPersonalizado">face</mat-icon>
+      </mat-icon>
+      <mat-menu #menu="matMenu">
+        
+        <button mat-menu-item routerLink="/cadastro">
+          <mat-icon>queue</mat-icon>
+          <span>Product</span>
+        </button>
+
+        <button mat-menu-item (click)="logOut()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+        
+        
+      </mat-menu>
+      </div>
+
+    <ng-template #loginSection>
+      <!-- Conteúdo para usuário não logado -->
+      <div class="item_cabecalho">
+        <button class="button__login" routerLink="/login">Login</button>
+      </div>
+    </ng-template>
+  </div>
+</mat-toolbar>

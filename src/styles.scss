@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body{
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+  }
+  :root{
+    --text-icone: #FFFFFF;
+    --texto-apresentacao: #FFF;
+    --cor-fundo: #FFF;
+    --texto-produtos: #464646;
+    --texto-label: #A2A2A2;
+    --azul-button: #2A7AE4;
+    --cinza-fundo: #F5F5F5;
+    --fundo-footer: #EAF2FD;
+    --texto-vermelho: #FF0000;
+  }
+  
+ 
+  
+  input:focus {
+    outline: none;
+  }
+  textarea:focus {
+    outline: none;
+  }
+  select:focus{
+    outline: none;
+  }
+  option:focus {
+    outline: none;
+  }
+  a{
+    text-decoration: none;
+  }

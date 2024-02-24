@@ -1,0 +1,19 @@
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+
+  .confirmar{
+    background-color: var(--azul-button);
+    color: white;
+  }
+
+  .cancelar{
+    background-color: var(--texto-vermelho);
+    color: white;
+  }

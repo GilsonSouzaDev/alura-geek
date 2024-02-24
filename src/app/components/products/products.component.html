@@ -1,0 +1,66 @@
+<main class="main__products">
+
+  
+  <section class="produtos">
+    <div class="produto__apresentacao">
+      <div class="produto__titulo">
+        <p>Star Wars</p>
+      </div>
+      <div class="produto__next">
+        <p class="textprodutos">Ver tudo</p>
+        <button routerLink="/allproducts"><img src="../../../assets/img/seta.svg" alt="->" class="seta"></button> 
+      </div>  
+    </div>
+    <section class="produtos__lista" >
+      <div class="produtos__itens" *ngFor="let star of starWarsProducts">
+        <img class="__imagem" [src]="star.url" alt="{{star.name}}">
+        <p class="produto__name">{{star.name}}</p>
+        <p class="produto__preco">R$ {{star.price | number:'1.2-2' }}</p>
+        <a href="#" routerLink="/oneproduct/{{star.id}}" class="produto__link">ver produto</a>
+      </div>
+    </section>
+  </section>
+  
+  <section class="produtos">
+    <div class="produto__apresentacao">
+      <div class="produto__titulo">
+        <p>Consoles</p>
+      </div>
+      <div class="produto__next">
+        <p class="textprodutos">Ver tudo</p>
+        <button routerLink="/allproducts"><img src="../../../assets/img/seta.svg" alt="->"></button> 
+      </div>  
+    </div>
+    <section class="produtos__lista">
+      <div class="produtos__itens" *ngFor="let console of consoleProducts">
+        <img class="__imagem" [src]="console.url" alt="{{console.name}}">
+        <p class="produto__name">{{console.name}}</p>
+        <p class="produto__preco">R$ {{console.price | number:'1.2-2' }}</p>
+        <a href="#" routerLink="/oneproduct/{{console.id}}" class="produto__link">ver produto</a>
+      </div>
+      
+    </section>
+  </section>
+  
+  <section class="produtos">
+    <div class="produto__apresentacao">
+      <div class="produto__titulo">
+        <p>Diversos</p>
+      </div>
+      <div class="produto__next">
+        <p class="textprodutos">Ver tudo</p>
+        <button routerLink="/allproducts"><img src="../../../assets/img/seta.svg" alt="->"></button> 
+      </div>  
+    </div>
+    <section class="produtos__lista">
+      <div class="produtos__itens" *ngFor="let produtos of diversosProducts">
+        <img class="__imagem" [src]="produtos.url" alt="{{produtos.name}}">
+        <p class="produto__name">{{produtos.name}}</p>
+        <p class="produto__preco">R$ {{produtos.price | number:'1.2-2' }}</p>
+        <a href="#" routerLink="/oneproduct/{{produtos.id}}" class="produto__link">ver produto</a>
+      </div>
+    </section>
+    
+  </section>
+  
+</main>

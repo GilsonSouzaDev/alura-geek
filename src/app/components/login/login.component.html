@@ -1,0 +1,19 @@
+
+<main>
+    <section>
+        <form class="login" #formLogin="ngForm" (ngSubmit)="logar(formLogin)">
+            <div class="login__titulo">
+                <p>Iniciar Sessão</p>
+            </div>
+            <div class="text">
+                <input name="user" type="text" placeholder="usuario = admin" class="__text" ngModel #user="ngModel">
+            </div>
+            <div class="senha">
+                <input name="password" type="password" placeholder="senha = admin" class="senha__text" ngModel #password="ngModel">
+            </div>
+            <div>
+                <button type="submit" class="login__button" >Entrar</button>
+            </div>
+        </form>
+    </section>
+</main>

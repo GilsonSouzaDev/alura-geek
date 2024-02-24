@@ -1,0 +1,137 @@
+div .imagem__apresentacao{
+    min-width: 100vw;
+    width: 100%;
+  }
+  
+  .imagem__apresentacao{
+    background: var(--imagemhero, linear-gradient(180deg, rgba(0, 0, 0, 0.00) 41.15%, rgba(0, 0, 0, 0.80) 100%), url('../../../assets/img/hero.jpeg'), lightgray 50% / cover no-repeat);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 352px;
+    width: 100%;
+    min-width: 100vw;
+  }
+  
+  
+  .apresentacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 71rem;
+    height: 22rem;
+    margin: 0 auto;
+  }
+  
+  .bloco__apresentacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 71rem;
+    height: 10.625rem;
+    padding-bottom: 2rem;
+  }
+  
+  .txtApresentacao__principal{
+    color: var(--texto-apresentacao);
+    font-size: 3.25rem;
+    width: 46.937rem;
+    height: 3.812rem;
+  }
+  
+  .txtApresentacao__secundario{
+    color: var(--texto-apresentacao);
+    font-size: 1.375rem;
+    width: 46.937rem;
+    height: 1.625rem;
+  }
+  
+  .button_apresentacao{
+    background-color: var(--azul-button);
+    color: var(--texto-apresentacao);
+    border: none;
+    width: 8.125rem;
+    height: 3.187rem;
+  }
+  
+  @media screen and (max-width: 1250px) {
+    .apresentacao{
+      width: 60rem
+    }
+  
+    .bloco__apresentacao{
+      width: 60rem;
+    }
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 1100px) {
+    .apresentacao{
+      width: 44rem
+    }
+  
+    .bloco__apresentacao{
+      width: 44rem;
+    }
+  
+    .txtApresentacao__principal{
+      font-size: 3.25rem;
+      width: 44rem;
+      height: 3.812rem;
+    }
+  
+    .txtApresentacao__secundario{
+      font-size: 1.375rem;
+      width: 44rem;
+      height: 1.625rem;
+    }
+  
+    .button_apresentacao{
+      width: 7.437rem;
+      height: 2.5rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 760px){
+  
+    .imagem__apresentacao{
+      height: 192px;
+    }
+  
+    .apresentacao{
+      width: 20.5rem;
+      height: 192px;
+    }
+  
+    .bloco__apresentacao{
+      width: 328px;
+      height: 98px;
+    }
+  
+    .txtApresentacao__principal{
+      font-size: 1.375rem;
+      width: 328px;
+      height: 1.625rem;
+    }
+  
+    .txtApresentacao__secundario{
+      font-size: 0.875rem;
+      width: 20.5rem;
+      height: 1rem;
+    }
+  
+    .button_apresentacao{
+      width: 7.437rem;
+      height: 2.5rem;
+    }
+  }
+    
+    
+  
