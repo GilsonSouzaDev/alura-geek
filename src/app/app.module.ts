@@ -32,6 +32,7 @@ import { UpdateComponent } from './components/update/update.component';
 import { DialogErroComponent } from './components/dialog-erro/dialog-erro.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 
 
 
@@ -71,7 +72,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatIconModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [AuthGuard],
