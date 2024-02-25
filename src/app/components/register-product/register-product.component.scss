@@ -93,7 +93,15 @@ section .cadastro{
     border: none;
     width: 559px;
     height: 51px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
   }
+  button.button__cadastro:active{
+    background-color: #c5cad1;
+    color: var(--azul-button);
+  }
+
   option:focus {
     outline: none;
   }

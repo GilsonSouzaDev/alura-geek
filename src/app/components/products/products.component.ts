@@ -31,13 +31,12 @@ export class ProductsComponent implements  OnInit{
     this.consoleProducts = this.products?.filter(p => p.category === 'Console');
     this.diversosProducts = this.products?.filter(p => p.category === 'Diversos');
 
-    this.starWarsProducts = this.starWarsProducts?.slice(0, this.starWarsProducts.length).sort(() => Math.random() - 0.5);
-    this.consoleProducts = this.consoleProducts?.slice(0, this.consoleProducts.length).sort(() => Math.random() - 0.5);
-    this.diversosProducts = this.diversosProducts?.slice(0, this.diversosProducts.length).sort(() => Math.random() - 0.5);
+    this.starWarsProducts = this.shuffleArray(this.starWarsProducts).slice(0,6);
+    this.consoleProducts = this.shuffleArray(this.consoleProducts).slice(0,6);
+    this.diversosProducts = this.shuffleArray(this.diversosProducts).slice(0,6);
 
     this.temProduto = this.products.length;
 
- 
     });
 
   }
@@ -45,7 +44,13 @@ export class ProductsComponent implements  OnInit{
 
   }
 
-  
+  shuffleArray(array: Product[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
   
 
   

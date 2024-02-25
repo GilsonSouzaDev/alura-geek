@@ -47,7 +47,17 @@
     width: 164px;
     height: 51px;
     padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
+  
+  button.botao__produtos:active{
+    background-color: #c5cad1;
+    color: var(--azul-button);
+  }
+
+
+
   .produto__next button{
     background-color: var(--text-icone);
     border: none;

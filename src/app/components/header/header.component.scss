@@ -22,6 +22,7 @@
   .logo{
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   
   .pesquisa{
@@ -68,7 +69,17 @@
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    
   }
+
+  button.button__login:active{
+    background-color: var(--azul-button);
+    color: var(--text-icone);  
+}
+
+
   
   .button__oculto{
     display: none;
@@ -80,6 +91,7 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+    
   }
 
   .__iconLogin{
@@ -87,6 +99,7 @@
     align-items: center;
     min-width: 60px;
     min-height: 51px;
+    cursor: pointer;
   }
   mat-icon{
     font-size: 3rem;

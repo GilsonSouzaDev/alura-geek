@@ -6,14 +6,18 @@
   
   .justify-center {
     justify-content: center;
+    gap: 4px;
   }
 
   .confirmar{
     background-color: var(--azul-button);
     color: white;
+    padding: 8px;
   }
 
   .cancelar{
     background-color: var(--texto-vermelho);
     color: white;
+    padding: 8px;
+
   }
