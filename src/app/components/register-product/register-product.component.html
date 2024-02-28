@@ -38,7 +38,7 @@
                         <option *ngFor="let categorie of categories" [value]="categorie">{{categorie}}</option>
                     </select>
                     <div  *ngIf="(categorie?.invalid && categorie?.touched) || categorie?.dirty">
-                        <app-mensagem *ngIf="categorie?.errors?.['required']" mensagem="O campo categoria deve ser selecionado"></app-mensagem>  
+                        <app-mensagem *ngIf="categorie?.errors?.['required']" mensagem="Uma categoria deve ser selecionada"></app-mensagem>  
                     </div>
                 </div>
                 
@@ -54,7 +54,7 @@
                         #nomeProduto="ngModel"
                     >
                     <div  *ngIf="(nomeProduto?.invalid && nomeProduto?.touched) || nomeProduto?.dirty">
-                        <app-mensagem *ngIf="nomeProduto?.errors?.['required']" mensagem="Você precisa dar um nome ao produto"></app-mensagem>  
+                        <app-mensagem *ngIf="nomeProduto?.errors?.['required']" mensagem="Você precisa atribuir um nome para o produto"></app-mensagem>  
                     </div>
                 </div>
                 
@@ -71,7 +71,7 @@
                         #price="ngModel"
                     >
                     <div  *ngIf="(price?.invalid && price?.touched) || price?.dirty">
-                        <app-mensagem *ngIf="price?.errors?.['required']" mensagem="Você precisa dar um preço ao produto"></app-mensagem>  
+                        <app-mensagem *ngIf="price?.errors?.['required']" mensagem="Você precisa atribuir um preço paraa o produto"></app-mensagem>  
                         <app-mensagem *ngIf="price?.errors?.['pattern']" mensagem="Preencha com um preço valido"></app-mensagem>
                     </div>
                 </div>
